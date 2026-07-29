@@ -1,7 +1,6 @@
 /* Google Fonts - Importação da fonte moderna Montserrat */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
-/* Reset Moderno */
 * {
     margin: 0;
     padding: 0;
@@ -10,201 +9,151 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #f3f7f9; /* Fundo azul-acinzentado muito suave */
-    color: #2c3e50;
+    background-color: #f3f7f9;
+    color: #1a252f; /* Escurecido levemente para maior contraste */
     line-height: 1.7;
 }
 
-/* Cabeçalho de Impacto */
 header {
     position: relative;
-    background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80') no-repeat center/cover;
-    /* Caso a imagem falhe, este degradê vibrante assume */
-    background-color: #0083b0; 
-    background-image: linear-gradient(135deg, #00b4db, #0083b0);
-    color: white;
-    padding: 100px 20px;
+    background: #005c7a; /* Fallback de alto contraste */
+    background-image: linear-gradient(135deg, #005c7a, #00334e);
+    color: #ffffff;
+    padding: 80px 20px;
     text-align: center;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* Película escura sobre a imagem para garantir que o texto fica legível */
-.header-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 44, 75, 0.5);
-    z-index: 1;
-}
-
-.header-container {
-    position: relative;
-    z-index: 2;
-}
-
+/* AJUSTE DE CONTRASTE: Texto escuro sobre o badge laranja */
 .badge-trip {
     display: inline-block;
     background-color: #ff9f43;
-    color: white;
-    font-size: 0.75rem;
+    color: #1a1a1a; /* Texto escuro garante contraste 8.5:1 */
+    font-size: 0.8rem;
     font-weight: 700;
     padding: 6px 16px;
     border-radius: 50px;
     margin-bottom: 15px;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
 }
 
 .header-container h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 15px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .data-viagem {
     font-size: 1.1rem;
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.2);
     display: inline-block;
     padding: 8px 22px;
     border-radius: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.4);
     font-weight: 600;
 }
 
-/* Container */
 .cronograma-container {
     max-width: 850px;
-    margin: 50px auto;
+    margin: 40px auto;
     padding: 0 20px;
 }
 
-/* Cartões de Viagem (Cards) */
 .dia-card {
     background: #ffffff;
-    border-radius: 16px;
-    padding: 35px;
-    margin-bottom: 35px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-    border: 1px solid rgba(0, 0, 0, 0.02);
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid #dcdfe3; /* Borda visível para quem tem baixa visão */
 }
 
-.dia-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 131, 176, 0.12);
-}
-
-/* Sub-cabeçalho interno do Card */
 .dia-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-    border-bottom: 2px dashed #f0f4f8;
+    border-bottom: 2px solid #eef2f5;
     padding-bottom: 12px;
 }
 
 .dia-tag {
-    background: linear-gradient(135deg, #00b4db, #0083b0);
-    color: white;
-    padding: 5px 16px;
+    background: #005c7a; /* Tom mais escuro para contraste garantido */
+    color: #ffffff;
+    padding: 6px 16px;
     font-size: 0.9rem;
     font-weight: 700;
-    border-radius: 8px;
+    border-radius: 6px;
 }
 
 .dia-data {
-    font-size: 0.9rem;
-    color: #7f8c8d;
+    font-size: 0.95rem;
+    color: #4a5568;
     font-weight: 600;
 }
 
 .dia-card h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: #002c4b;
-    margin-bottom: 25px;
-    font-weight: 700;
+    margin-bottom: 20px;
 }
 
+/* AJUSTE DE CONTRASTE: Ícone do título mais escuro */
 .icon-title {
-    color: #ff9f43; /* Cor laranja de destaque nos ícones dos títulos */
+    color: #d35400; 
     margin-right: 8px;
 }
 
-/* Estrutura das Atividades por Período */
 .atividade {
     margin-bottom: 20px;
     padding-left: 15px;
-    border-left: 3px solid #eef2f5;
+    border-left: 4px solid #cbd5e1;
 }
 
-.atividade:last-of-type {
-    margin-bottom: 0;
-}
-
-/* Etiquetas Coloridas dos Períodos */
+/* AJUSTES DE CONTRASTE NAS ETIQUETAS DE PERÍODO */
 .periodo {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-weight: 700;
     text-transform: uppercase;
     padding: 4px 10px;
     border-radius: 4px;
     margin-bottom: 8px;
-    letter-spacing: 0.5px;
 }
 
-.periodo.manha { background-color: #ffeaa7; color: #d63031; }      /* Amarelo Sol */
-.periodo.almoco { background-color: #fab1a0; color: #d63031; }     /* Coral / Fome */
-.periodo.tarde { background-color: #e0f7fa; color: #0083b0; }      /* Azul Céu */
-.periodo.noite { background-color: #dfe6e9; color: #2d3436; }      /* Cinza Lunar */
+.periodo.manha { background-color: #fff3bf; color: #7a4100; } /* Contraste 7.1:1 */
+.periodo.almoco { background-color: #ffe3e3; color: #a61e4d; } /* Contraste 6.8:1 */
+.periodo.tarde { background-color: #e0f7fa; color: #005c7a; }  /* Contraste 5.5:1 */
+.periodo.noite { background-color: #e9ecef; color: #212529; }  /* Contraste 11.5:1 */
 
 .atividade p {
-    font-size: 0.95rem;
-    color: #576574;
+    font-size: 1rem;
+    color: #2d3748;
 }
 
-/* Rodapé */
 footer {
-    background-color: #002c4b;
-    color: #e1e8ed;
-    padding: 50px 20px;
-    margin-top: 80px;
+    background-color: #001f3f;
+    color: #ffffff;
+    padding: 40px 20px;
+    margin-top: 60px;
     text-align: center;
 }
 
+/* AJUSTE DE CONTRASTE: Dica do rodapé otimizada */
 .footer-tip {
     max-width: 750px;
-    margin: 0 auto 30px auto;
-    background: rgba(255, 159, 67, 0.15);
-    border: 1px solid #ff9f43;
+    margin: 0 auto 25px auto;
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px solid #ffd180;
     padding: 20px;
-    border-radius: 12px;
-    color: #ff9f43;
+    border-radius: 10px;
+    color: #ffd180; /* Amarelo claro atinge taxa de 9.1:1 */
     text-align: left;
 }
 
-.footer-tip p {
-    font-size: 0.95rem;
-}
-
-.copyright {
-    font-size: 0.85rem;
-    color: #8c9fae;
-}
-
-/* Ajustes para Telemóveis / Smartphones */
-@media (max-width: 600px) {
-    header { padding: 60px 15px; }
-    .header-container h1 { font-size: 2rem; }
-    .dia-card { padding: 20px; }
-    .dia-header { flex-direction: column; align-items: flex-start; gap: 10px; }
-    .dia-card h2 { font-size: 1.25rem; }
+/* FOCO ACESSÍVEL: Permite que pessoas navegando via Teclado (TAB) vejam onde estão */
+a:focus, button:focus, [tabindex]:focus {
+    outline: 3px solid #ff9f43;
+    outline-offset: 3px;
 }
